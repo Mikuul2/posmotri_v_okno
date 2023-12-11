@@ -52,10 +52,10 @@ ol {
   align-items: flex-end;
   gap: 30px;
   margin: 0 auto;
-  padding-inline-start: 30px;
+  /* padding-inline-start: 30px;
   padding-inline-end: 30px;
   padding-block-start: 133px;
-  padding-block-end: 133px;
+  padding-block-end: 133px; */
   inline-size: 1140px;
 }
 
@@ -74,6 +74,10 @@ ol {
   block-size: 298px;
 }
 
+.content__list::-webkit-scrollbar {
+  inline-size: 1px;
+}
+
 .content__details {
   inline-size: 100%;
   block-size: 100%;
@@ -81,7 +85,7 @@ ol {
 
 .title {
   margin-bottom: 26px;
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -91,7 +95,7 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -179,7 +183,6 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
   margin-inline-end: 5px;
   border: 1px solid #fff;
   inline-size: 19px;
@@ -192,10 +195,12 @@ ol {
 
 .search-form__checkbox[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #fff;
-  inset-block-start: 1px;
-  inset-inline-start: 1px;
+  margin-inline-start: 1px;
+  margin-block-start: 1px;
   inline-size: 15px;
   block-size: 15px;
 }
@@ -236,7 +241,7 @@ ol {
 .content__video-card-title {
   margin-block-end: 6px;
   color: #fff;
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
